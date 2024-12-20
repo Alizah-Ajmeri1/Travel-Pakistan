@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height:40vh;
+            background-image: url(images/t-banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        /* Navbar start */
+        header {
+            width: 100%;
+            height: 75px;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            padding: 30px 30px;
+            background-color: rgba(12, 12, 14, 0.474);
+            /* position: fixed; */
+        }
+
+        .links {
+            width: 60%;
+            height: 40px;
+        }
+
+        .links ul li {
+            display: inline;
+            margin-left: 30px;
+        }
+
+        .links ul {
+            float: right;
+            padding-top: 10px;
+        }
+
+        .links ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .links ul li a:hover {
+            color: chocolate;
+        }
+
+        button {
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 50px;
+            width: 90px;
+            height: 40px;
+        }
+
+        .btn1 {
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: forestgreen;
+            color: white;
+            border-radius: 60px;
+            width: 120px;
+            height: 40px;
+            border: none;
+            font-weight: bolder;
+            /* border-style:solid; */
+            transition-property: background-color color font-weight border border-style cursor transform;
+            transition-duration: 1.5s;
+
+        }
+
+        .btn2 {
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: chocolate;
+            color: white;
+            border-radius: 60px;
+            width: 125px;
+            height: 40px;
+            border: none;
+            font-weight: bold;
+            /* border-style: solid; */
+            transition-property: background-color color font-weight border border-style cursor transform;
+            transition-duration: 1s;
+        }
+
+        .btn1:hover {
+            background-color: transparent;
+            color: forestgreen;
+            font-weight: bolder;
+            border: forestgreen;
+            border-style: solid;
+            cursor: pointer;
+            transform: translateY(-4px);
+        }
+
+        .btn2:hover {
+            background-color: transparent;
+            color: chocolate;
+            border: chocolate;
+            border-style: solid;
+            font-weight: bolder;
+            cursor: pointer;
+            transform: translateY(-4px);
+        }
+
+        /* Navbar end */
+        /* Banner start */
+        .banner {
+            /* border: 2px solid red; */
+            width: 100%;
+            height: 370px;
+            background-color: rgba(0, 0, 0, 0.278);
+        }
+
+        .text p {
+            color: whitesmoke;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 200px;
+            font-size: 40px;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            padding-top: 50px;
+            padding-top: 5px;
+        }
+
+        .text h2 {
+            color: whitesmoke;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 200px;
+            font-size: 50px;
+            font-weight: bolder;
+            letter-spacing: 3px;
+        }
+
+        .search {
+            width: 75%;
+            height: 130px;
+            /* border: 2px solid red; */
+            margin-left: 200px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .search p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: whitesmoke;
+            font-weight: bolder;
+            font-size: 14px;
+            margin-top: 20px;
+            line-height: 35px;
+        }
+
+        input[type="text"] {
+            width: 160px;
+            height: 48px;
+            border: none;
+            outline: none;
+            font-size: 12px;
+        }
+
+        input::placeholder {
+            padding-left: 10px;
+        }
+
+        .search i {
+            margin-left: -25px;
+        }
+
+        .btn {
+            margin-top: 35px;
+            width: 160px;
+            height: 48px;
+            border-radius: 0;
+            background-color: dodgerblue;
+            color: whitesmoke;
+            font-size: 14px;
+            font-weight: bolder;
+            outline: none;
+            border: none;
+            transition-property: background-color cursor;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+
+        .btn:hover {
+            background-color: rgba(30, 143, 255, 0.521);
+            cursor: pointer;
+        }
+
+        .main1 {
+            width: 75%;
+            height: 3100px;
+            border-bottom: 2px solid silver;
+            margin-left: 200px;
+        }
+
+        .title {
+            width: 100%;
+            height: 150px;
+            /* border: 2px solid black; */
+            margin-top: 20px;
+        }
+
+        .title h1 {
+            padding-left: 30px;
+            font-weight: lighter;
+            font-size: 32px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+       .title i {
+            margin-right: 40px;
+        }
+
+        .title p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: gray;
+            line-height: 25px;
+            margin-top: 20px;
+            font-size: 17px;
+        }
+
+        .pkg1 {
+            width: 100%;
+            height: 280px;
+            /* border: 2px solid red; */
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .pkg1 .pic {
+            width: 30%;
+            height: 260px;
+            /* border: 2px solid black; */
+            background-image: url(images/t1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .des {
+            width: 45%;
+            height: 230px;
+            /* border: 2px solid black; */
+            padding-left: 22px;
+            padding-right: 22px;
+            padding-top: 10px;
+        }
+
+        .des h3 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .des p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 16px;
+            padding-top: 20px;
+            line-height: 24px;
+            color: gray;
+        }
+
+        .price {
+            width: 25%;
+            height: 230px;
+            border-left: 2px solid silver;
+            text-align: center;
+            padding-top: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .price p {
+            font-size: 14px;
+            color: gray;
+            padding-bottom: 25px;
+        }
+
+        .price h6 {
+            font-size: 18px;
+            font-weight: bolder;
+            padding-bottom: 70px;
+        }
+
+        .booked {
+            width: 230px;
+            height: 50px;
+            border-radius: 0;
+            border: none;
+            outline: none;
+            background-color: dodgerblue;
+            color: whitesmoke;
+            font-size: 16px;
+            transition: all 1s ease;
+        }
+
+        .booked:hover {
+            background-color: rgba(30, 143, 255, 0.541);
+        }
+
+        .pkg2 {
+            width: 100%;
+            height: 280px;
+            /* border: 2px solid red; */
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .pkg2 .pic {
+            width: 30%;
+            height: 260px;
+            /* border: 2px solid black; */
+            background-image: url(images/t2.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pkg3 {
+            width: 100%;
+            height: 280px;
+            /* border: 2px solid red; */
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .pkg3 .pic {
+            width: 30%;
+            height: 260px;
+            /* border: 2px solid black; */
+            background-image: url(images/t3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pkg4 {
+            width: 100%;
+            height: 280px;
+            /* border: 2px solid red; */
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .pkg4 .pic {
+            width: 30%;
+            height: 260px;
+            /* border: 2px solid black; */
+            background-image: url(images/t4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pkg5 {
+            width: 100%;
+            height: 280px;
+            /* border: 2px solid red; */
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .pkg5 .pic {
+            width: 30%;
+            height: 260px;
+            /* border: 2px solid black; */
+            background-image: url(images/t5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pkg6 {
+            width: 100%;
+            height: 280px;
+            /* border: 2px solid red; */
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .pkg6 .pic {
+            width: 30%;
+            height: 260px;
+            /* border: 2px solid black; */
+            background-image: url(images/t6.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .button {
+            width: 100;
+            height: 100px;
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .more {
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: rgba(192, 192, 192, 0.477);
+            margin-left: 20px;
+            font-size: 12px;
+            color: grey;
+            font-weight: bolder;
+        }
+
+        .more a {
+            text-decoration: none;
+        }
+
+        .more:hover {
+            background-color: dodgerblue;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .places {
+            width: 100%;
+            height: 500px;
+            /* border: 2px solid red; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .places h3{
+            font-size: 30px;
+            font-weight: lighter;
+            padding-top: 40px;
+            padding-bottom: 5px;
+        }
+        .services {
+            width: 100%;
+            height: 500px;
+            /* border: 2px solid red; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .services h3{
+            font-size: 30px;
+            font-weight: lighter;
+            padding-top: 40px;
+            padding-bottom: 5px;
+        }
+
+        .icons {
+            width: 100%;
+            height: 400px;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .icon {
+            width: 30%;
+            height: 200px;
+            /* border: 2px solid black; */
+        }
+
+        .i1,
+        .i2,
+        .i3,
+        .i4,
+        .i5,
+        .i6,
+        .i7,
+        .i8,
+        .i9,
+        .i10,
+        .i11,
+        .i12 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .icon p {
+            color: gray;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .main2 {
+            width: 75%;
+            height: 1600px;
+            /* border: 2px solid red; */
+            margin-left: 200px;
+        }
+        .tours, .tour {
+            width: 100%;
+            height: 240px;
+            /* border: 2px solid red; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .tours h3, .tour h3, .trip1 h3, .g-tours h3, .trip2 h3{
+            font-size: 30px;
+            font-weight: lighter;
+            padding-top: 50px;
+            padding-bottom: 5px;
+        }
+        .lists {
+            width: 100%;
+            height: 140px;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .list {
+            width: 20%;
+            height: 140px;
+            /* border: 2px solid black; */
+            padding-top: 40px;
+            color: grey;
+        }
+        .list a{
+            text-decoration: none;
+            color: dodgerblue;
+            line-height: 22px;
+        }
+        .list a:hover{
+            color: rgba(30, 143, 255, 0.608);
+        }
+        .trip1{
+            width: 100%;
+            height: 310px;
+            /* border: 2px solid red; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .lists1 {
+            width: 100%;
+            height: 220px;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .list1 {
+            width: 20%;
+            height: 220px;
+            /* border: 2px solid black; */
+            padding-top: 40px;
+            color: grey;
+        }.list1 a{
+            text-decoration: none;
+            color: dodgerblue;
+            line-height: 22px;
+        }
+        .list1 a:hover{
+            color: rgba(30, 143, 255, 0.608);
+        }
+        .trip2{
+            width: 100%;
+            height: 212px;
+            /* border: 2px solid red; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .lists2 {
+            width: 100%;
+            height: 120px;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .list2 {
+            width: 20%;
+            height: 120px;
+            /* border: 2px solid black; */
+            padding-top: 40px;
+            color: grey;
+        }
+        .list2 a{
+            text-decoration: none;
+            color: dodgerblue;
+            line-height: 22px;
+        }
+        .list2 a:hover{
+            color: rgba(30, 143, 255, 0.608);
+        }
+        .g-tours{
+            width: 100%;
+            height: 350px;
+            /* border: 2px solid red; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .lists3 {
+            width: 100%;
+            height: 250px;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .list3 {
+            width: 20%;
+            height: 250px;
+            /* border: 2px solid black; */
+            padding-top: 40px;
+            color: grey;
+        }.list3 a{
+            text-decoration: none;
+            color: dodgerblue;
+            line-height: 22px;
+        }
+        .list3 a:hover{
+            color: rgba(30, 143, 255, 0.608);
+        }
+        /* Footer start */
+.footer {
+    background-color: rgba(17, 7, 28, 0.895);
+    padding: 70px 0;
+    height: 400px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.main {
+    width: 100%;
+    /* border: 2px solid red; */
+    margin: auto;
+    height: 300px;
+}
+
+.footer-col2 ul {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.footer-col2 {
+    width: 25%;
+    padding: 0px 10px;
+}
+
+
+.footer-col2 h5 {
+    font-size: 30px;
+    color: dodgerblue;
+    padding-top: 30px;
+}
+
+.footer-col1 {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col1 h5 {
+    font-size: 30px;
+    color: chocolate;
+    padding-top: 30px;
+}
+
+.footer-col1 p {
+    color: white;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.footer-col2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    word-spacing: 2px;
+}
+
+.footer-col2 ul li a:hover {
+    color: cornflowerblue;
+}
+
+.footer-col2 ul li {
+    line-height: 25px;
+}
+/* Footer end */
+
+    </style>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <header>
+        <div class="logo">
+            <a href="index.html"> <img src="images/logo_explore_pakistan-removebg-preview.png" alt="logo" width="150px"
+                    height="130px"></a>
+
+        </div>
+        <div class="links">
+            <ul>
+                <li class="home"><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="aboutus.html" target="_blank">About us</a></li>
+                <li><a href="login.html" target="_blank"><button class="btn1">Login</button></a></li>
+                <li><a href="Signup.html" target="_blank"><button class="btn2">Sign Up</button></a></li>
+            </ul>
+        </div>
+
+    </header>
+    <!-- navbar end -->
+    <div class="banner">
+        <div class="text" data-aos="fade-up" data-aos-duration="1300" data-aos-easing="linear">
+            <p>All Packages to</p>
+            <h2>Visit Pakistan</h2>
+        </div>
+         <div class="search" data-aos="fade-up" data-aos-duration="1300" data-aos-easing="linear"> 
+            <p>Keywords <br>
+                <input type="text" placeholder=""><i class="fa-solid fa-magnifying-glass"
+                    style="color:black; font-size: 12px;"></i>
+            </p>
+            <p>Category <br>
+                <input type="text" placeholder="Any"><i class="fa-solid fa-caret-down"
+                    style="color:black; font-size: 12px;"></i>
+            </p>
+            <p>Duration <br>
+                <input type="text" placeholder="Any"><i class="fa-solid fa-caret-down"
+                    style="color:black; font-size: 12px;"></i>
+            </p>
+            <p>Min Price <br>
+                <input type="text" placeholder=""><i class="fa-solid fa-rupee-sign"
+                    style="color:gray; font-size: 12px; "></i>
+            </p>
+            <p>Max Price <br>
+                <input type="text" placeholder=""><i class="fa-solid fa-rupee-sign"
+                    style="color:gray; font-size: 12px;"></i>
+            </p>
+            <p>
+                <button class="btn">SEARCH</button>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="title">
+            <h1><i class="fa-solid fa-map" style="color:dodgerblue;"></i>Pakistan Tour Pakages</h1>
+            <p>Coming to Pakistan having lots of tourism plans in your mind? Then let us be the reliable companion of
+                your journey. We provide affordable Pakistan tour packages across the country. Either you’re inspired
+                from north Pakistan or even have a dream of historical site's excursion, we're offering comfortable
+                travel and luxurious stay services to visit the best tourist places of Pakistan. So, check out our
+                Pakistan tour packages price to keep your budget balanced.</p>
+        </div>
+        <div class="pkg1" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <div class="pic">
+            </div>
+            <div class="des">
+                <h3>2 DAYS TRIP TO MURREE, PATRIATA & GALYAT</h3>
+                <P>Enjoy the best Murree tour of 2 days (1 Night) and see the beauty of Murree-The Queen of Mountains.
+                    You will avail a chance to enjoy the Patriata chair lift and the sightseeing of Galiyat Region.</P>
+            </div>
+            <div class="price">
+                <p>As low as</p>
+                <h6>Rs 12,850</h6>
+                <button class="booked">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="pkg2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <div class="pic"></div>
+            <div class="des">
+                <h3>3 DAYS TREKKING TRIP TO SPINKHOR LAKE KALAM</h3>
+                <P>Let’s get ready for an adventurous trekking trip to Spinkhor Lake of Utror Swat Valley ! Pack your
+                    bags
+                    and enjoy the trekking trip to beautiful forest of Swat. Bring your friends along to make the trip
+                    memorable.</P>
+            </div>
+            <div class="price">
+                <p>As low as</p>
+                <h6>Rs 17,500</h6>
+                <button class="booked">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="pkg3" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <div class="pic"></div>
+            <div class="des">
+                <h3>4 DAYS TRIP TO DUDIPATSAR LAKE NARAN</h3>
+                <P>Discover the beauty of Dudipatsar Lake of Naran Valley on a 4 days (3 Nights) trip, including
+                    transport,
+                    quality meals, camping nights, and refreshments. You will get a chance to see the base, Jhalkhad
+                    Naran
+                    valley and surrounding areas of Purbinar stream on a hike towards dudipatasr lake on a lush green
+                    meadows.</P>
+            </div>
+            <div class="price">
+                <p>As low as</p>
+                <h6>Rs 21,500</h6>
+                <button class="booked">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="pkg4"data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <div class="pic"></div>
+            <div class="des">
+                <h3>7 DAYS FAMILY TRIP TO NARAN, HUNZA, NALTAR AND KHUNJERAB PASS</h3>
+                <P>Discover the hidden gems of Hunza Valley and Naltar Valley on a dedicated luxury transport including
+                    2 quality meals/day, best accommodation and tour guide services for 7 days (6 Nights).The tourists
+                    will visit the Rakaposhi view point, Hunza Valley, Altit Fort, Baltit Fort, Duikar Point, and
+                    explore the snowy mountains of Naltar Valley.</P>
+            </div>
+            <div class="price">
+                <p>As low as</p>
+                <h6>Rs 174,000</h6>
+                <button class="booked">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="pkg5" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <div class="pic"></div>
+            <div class="des">
+                <h3>5 DAYS FAMILY TRIP TO HUNZA VALLEY AND KHUNJERAB PASS</h3>
+                <P>Explore the Hunza Valley and Khunjerab Pass for a 5 days (4 Nights) tour on luxury transport
+                    including 2 quality meals/day, standard accommodation in the hotel, and refreshments. The explorers
+                    will get the chance to visit Lulusar Lake, Babusar Top, Chillas, Rakaposhi viewpoint, Altit Fort,
+                    Baltit Fort, Attabad Lake, Pak-China Border and much more.</P>
+            </div>
+            <div class="price">
+                <p>As low as</p>
+                <h6>Rs 120,000</h6>
+                <button class="booked">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="pkg6"data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <div class="pic"></div>
+            <div class="des">
+                <h3>3 DAYS FAMILY TRIP TO SHOGRAN AND SIRI PAYE MEADOWS</h3>
+                <P>A special 3 days (2 Nights) tour to Shogran and Siri Paye on a luxury transport, refreshments during
+                    traveling, and quality meals with one BBQ and bonfire. The package includes the visit to Shogran &
+                    Siri Paye Meadows, Lake Safi ul Malook on Jeeps and Kiwai Waterfall.</P>
+            </div>
+            <div class="price">
+                <p>As low as</p>
+                <h6>Rs 82,000</h6>
+                <button class="booked">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="button">
+            <a href="#"><button class="more more1"
+                    style="background-color: dodgerblue; color: whitesmoke;">1</button></a>
+            <a href="#"><button class="more more2">2</button></a>
+            <a href="#"><button class="more more3">3</button></a>
+            <a href="#"><button class="more more4">4</button></a>
+            <a href="#"><button class="more more5">5</button></a>
+            <a href="#"><button class="more more6">></button></a>
+        </div>
+        <div class="places" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear">
+            <h3>EXPLORE MORE <span style="color:forestgreen; font-weight: bold;">STUNNING</span> PLACES</h3>
+            <p style="color: gray;">We are truly interpreting the beauty of Pakistan and offering a wide range of places
+                to experience from every tourism aspect.</p>
+            <div class="icons">
+                <div class="icon">
+                    <div class="i1">
+                        <img src="images/Icons-01.webp" alt="icon" width="80px" height="80px">
+                    </div>
+                    <p>World Highest peaks and mountains</p>
+                </div>
+                <div class="icon">
+                    <div class="i2">
+                        <img src="images/Icons-02.webp" alt="icon" width="80px" height="80px">
+                    </div>
+                    <p>Lush green plateaus and medows</p>
+                </div>
+                <div class="icon">
+                    <div class="i3">
+                        <img src="images/Icons-03.webp" alt="icon" width="80px" height="80px">
+                    </div>
+                    <p>Enchanting national park and forests</p>
+                </div>
+                <div class="icon">
+                    <div class="i4">
+                        <img src="images/Icons-04.webp" alt="icon" width="80px" height="80px">
+                    </div>
+                    <p>World’s most beautiful lakes and rivers</p>
+                </div>
+                <div class="icon">
+                    <div class="i5">
+                        <img src="images/Icons-05.webp" alt="icon" width="80px" height="80px">
+                    </div>
+                    <p>Treks and trails</p>
+                </div>
+                <div class="icon">
+                    <div class="i6">
+                        <img src="images/Icons-06.webp" alt="icon" width="80px" height="80px">
+                    </div>
+                    <p>Ancient Monuments and archaeological sites</p>
+                </div>
+            </div>
+        </div>
+        <div class="services" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear">
+        <h3>OUR <span style="color:forestgreen; font-weight: bold;" >COMMENDABLE</span> SERVICES</h3>
+        <p style="color: gray;">Pakistan Travel Places is servicing its clients with advanced and luxurious facilities
+            since 2015. Our accommodating services are:</p>
+        <div class="icons">
+            <div class="icon">
+                <div class="i7">
+                    <img src="images/Icons-07.webp" alt="icon" width="80px" height="80px">
+                </div>
+                <p>Safe and Sound Camping</p>
+            </div>
+            <div class="icon">
+                <div class="i8">
+                    <img src="images/Icons-08.webp" alt="icon" width="80px" height="80px">
+                </div>
+                <p>Well-Guided Hiking & Trekking</p>
+            </div>
+            <div class="icon">
+                <div class="i9">
+                    <img src="images/Icons-10.webp" alt="icon" width="80px" height="80px">
+                </div>
+                <p>Comfortable Well Conditioned Transport</p>
+            </div>
+            <div class="icon">
+                <div class="i10">
+                    <img src="images/Icons-09.webp" alt="icon" width="80px" height="80px">
+                </div>
+                <p>Rafting in Rowing Rivers</p>
+            </div>
+            <div class="icon">
+                <div class="i11">
+                    <img src="images/Icons-11.webp" alt="icon" width="80px" height="80px">
+                </div>
+                <p>Bonfire-BBQs, Quality Meals & Snacks</p>
+            </div>
+            <div class="icon">
+                <div class="i12">
+                    <img src="images/Icons-12.webp" alt="icon" width="80px" height="80px">
+                </div>
+                <p>Team Building Activities & Entertainment</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="main2">
+        <div class="tours" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <h3>Family and Friends <span style="color: forestgreen; font-weight: bold;"> Tours </span></h3>
+            <div class="lists">
+                <div class="list">
+                    <ul>
+                        <li><a href="#">Plan your family trip to Hunza</a></li>
+                        <li><a href="#">Book your 3 days trip to Lake Saif Ul Malook</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#">Spend your summer holidays in Gilgit-Baltistan</a></li>
+                        <li><a href="#">Summer family retreat to Kashmir Janaat Nazeer</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#">Rejoice your vacations in the beautiful meadows of Shogran</a></li>
+                        <li><a href="#">Let's go on a Weekend trip to Kalam Sawat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tour" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <h3>Honeymoon <span style="color: forestgreen; font-weight: bold;"> Tour </span> Packages</h3>
+            <div class="lists">
+                <div class="list">
+                    <ul>
+                        <li><a href="#">Luxury Honeymoon Package to Hunza </a></li>
+                        <li><a href="#">Make your memories in Neelum Valley Kashmir</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#">Spend most memorable time with your special one in Skardu</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#">3 days Honeymoon trip to Naran and Saif Ul Malook Lake</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="trip1"data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <h3>Hiking and Camping <span style="color: forestgreen; font-weight: bold;"> Trips</span></h3>
+            <div class="lists1">
+                <div class="list1">
+                    <ul>
+                        <li><a href="#">Trekking trip to Chitta katha Lake Kashmir</a></li>
+                        <li><a href="#">3 days Camping trip to the mesmerizing Ratti Gali Lake</a></li>
+                        <li><a href="#">Trekking tour to Miranjani and Mushkpiri Top</a></li>
+                    </ul>
+                </div>
+                <div class="list1">
+                    <ul>
+                        <li><a href="#">2 days Camping adventure to Dagri Bangla</a></li>
+                        <li><a href="#">5 days Camping adventure to Fairy Meadows and Nanga Parbat Base Camp</a></li>
+                        <li><a href="#">4 days Camping adventure to Saral and Dudipatsar Lake</a></li>
+                    </ul>
+                </div>
+                <div class="list1">
+                    <ul>
+                        <li><a href="#">Luxury 4 days jeep Safari trip to Chitta Khata Lake and Shounter Valley</a></li>
+                        <li><a href="#">One day Trekking adventure to Mushkpuri Top</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="trip2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <h3>Cultural and Historical <span style="color: forestgreen; font-weight: bold;"> Trips </span></h3>
+            <div class="lists2">
+                <div class="list2">
+                    <ul>
+                        <li><a href="#">Visit the historical Kalash and Chitral Valley for 4 days</a></li>
+                    </ul>
+                </div>
+                <div class="list2">
+                </div>
+                <div class="list2">
+                </div>
+            </div>
+        </div>
+        <div class="trip2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <h3>Winter <span style="color: forestgreen; font-weight: bold;"> Trips </span></h3>
+            <div class="lists2">
+                <div class="list2">
+                    <ul>
+                        <li><a href="#">Enjoy 3 days winter trip to Sawat Valley and Malam Jabba</a></li>
+                    </ul>
+                </div>
+                <div class="list2">
+                    <ul>
+                        <li><a href="#">A snow treat for 2 days to Malam Jabba & Sawat Valley</a></li>
+                    </ul>
+                </div>
+                <div class="list2">
+                </div>
+            </div>
+        </div>
+        <div class="g-tours"data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+            <h3>Public Group<span style="color: forestgreen; font-weight: bold;"> Tours</span></h3>
+            <div class="lists3">
+                <div class="list3">
+                    <ul>
+                        <li><a href="#">Go on a family trip for 3 days to Sawat Valley and Mahodand Lake</a></li>
+                        <li><a href="#">Explore the fascinating beauty of Skardu Valley on an 8 days autumn trip</a></li>
+                        <li><a href="#">Discover the hidden beauty of Hunza Valley on an 7 days trip with luxurious services</a></li>
+                    </ul>
+                </div>
+                <div class="list3">
+                    <ul>
+                        <li><a href="#">Autumn is wonderful in Huna! Visit Hunza Valley for 5 days to witness its beauty</a></li>
+                        <li><a href="#">8 days family trip to Skardu, Deosai Plain and Shigar Valley</a></li>
+                        <li><a href="#">Enjoy a luxurious trip to Hunza Valley and Khunjerab Pass for 5 days</a></li>
+                    </ul>
+                </div>
+                <div class="list3">
+                    <ul>
+                        <li><a href="#">Hunza welcome tourist in the Cherry Blosam season. Visit Hunza for 5 days luxury trip</a></li>
+                        <li><a href="#">Visit the wonderful tourist points in Hunza and Naltar Valley on a 7 days trip</a></li>
+                        <li><a href="#">4 days captivating tour to Kalash and Chitral Valley</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="main">
+            <div class="row">
+                <div class="footer-col1">
+                    <h5>Explore <span style="color: forestgreen;">Pakistan</span></h5>
+                    <p>Pakistan, where your journey begins.
+                        Discover your next great place, find trips and know about the famous travel destinations of
+                        Pakistan.
+                        A travel and tourism company of Pakistan, city sightseeing, group and corporate tours, camping
+                        and hiking adventures, family and solo trips, and much more for a perfect travel experience in
+                        Pakistan!</p>
+                </div>
+                <div class="footer-col2">
+                    <h5>Pakistan Tour Pakages</h5>
+                    <ul>
+                        <li><a href="#">Hunza Tour Pakages</a></li>
+                        <li><a href="#">Skardu Tour Pakages</a></li>
+                        <li><a href="#">Kashmir Tour Pakages</a></li>
+                        <li><a href="#">Lahore Tour Pakages</a></li>
+                        <li><a href="#">Sawat Tour Pakages</a></li>
+                        <li><a href="#">Islamabad Tour Pakages</a></li>
+                        <li><a href="#">Naran Kaghan Tour Pakages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col2">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="tour.html">Tours</a></li>
+                        <li><a href="#">Destinations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col2">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> +92 3124567890</a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i> +92 3124567890</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelopes-bulk"></i> Mail:info@explorepakistan.pk</a></li>
+                        <li><a href="#"><i class="fa-solid fa-address-book"></i> Address:Office# 598,Nishtr Road, Garden West,Karachi.</a></li>
+                        <li><a href="#"><i class="fa-solid fa-business-time"></i> Google My Business</a></li>
+                        <li><a href="#"><i class="fa-solid fa-map-pin"></i> Map Pin</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    <script>
+        AOS.init();
+      </script>
+</body>
+
+</html>
